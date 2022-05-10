@@ -1,0 +1,12 @@
+.block {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 15%;
+    height: 50px;
+    font-size: 26px;
+    text-transform: uppercase;
+    margin: 20px;
+}
