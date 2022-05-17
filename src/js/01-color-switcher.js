@@ -4,14 +4,18 @@ const refs = {
     body: document.querySelector('body'),
 };
 
+refs.stopBtn.disabled = true;
+
 
 refs.startBtn.addEventListener('click', () => {
     intervalId = setInterval(setBodyBgColor, 1000);
     refs.startBtn.disabled = true;
+    refs.stopBtn.disabled = false;
 });
 refs.stopBtn.addEventListener('click', () => {
     clearInterval(intervalId);
     refs.startBtn.disabled = false;
+    refs.stopBtn.disabled = true;
 });
 
 function setBodyBgColor() {
